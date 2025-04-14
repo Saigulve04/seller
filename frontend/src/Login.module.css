@@ -1,0 +1,149 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f8ff; /* Light background */
+}
+
+.imageContainer {
+  width: 40%; /* Adjust as needed */
+  max-width: 500px;
+  height: 400px; /* Adjust as needed */
+  background-color: #e0e0e0; /* Placeholder background */
+  margin-right: 2rem;
+  border-radius: 8px;
+  overflow: hidden; /* Prevent image overflow */
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.formContainer {
+  width: 40%; /* Adjust as needed */
+  max-width: 500px;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #000000;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.passwordToggle {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.rememberMe {
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+.forgotPassword {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.forgotPassword:hover {
+  text-decoration: underline;
+}
+
+.button {
+  background-color: #343a40; /* Dark background */
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #23272b; /* Darker background */
+}
+
+.signupLink {
+  text-align: center;
+  margin-top: 1rem;
+  color: #666;
+}
+
+.signupLink a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signupLink a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  background-color: #ffebee;
+  color: #d32f2f;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border: 1px solid #ffcdd2;
+}
+
+/* Responsive adjustments (example) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .imageContainer,
+  .formContainer {
+    width: 90%;
+    margin: 1rem 0;
+  }
+}

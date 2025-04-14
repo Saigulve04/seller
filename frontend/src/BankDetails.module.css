@@ -1,0 +1,116 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background-color: white;
+  width: 16rem; /* 64px */
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 4rem; /* 16px */
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  margin-bottom: 0.5rem;
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.navButton:hover {
+  background-color: #f0f0f0;
+}
+
+.navButtonIcon {
+  width: 1.25rem; /* 20px */
+  height: 1.25rem; /* 20px */
+  margin-right: 0.5rem;
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.headerTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.profileIcon {
+  width: 2.5rem; /* 40px */
+  height: 2.5rem; /* 40px */
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileIconSvg {
+  width: 1.5rem; /* 24px */
+  height: 1.5rem; /* 24px */
+}
+.form {
+  /* Add your form styles here */
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+}
+
+.submitButton {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+}
