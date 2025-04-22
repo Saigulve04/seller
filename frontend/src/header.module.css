@@ -1,5 +1,5 @@
 .header {
-  background-color: #000000;
+  background-color: #00B4D8;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -23,7 +23,7 @@
 }
 
 .logoText {
-  color: #A62A9A;
+  color: black;
   font-size: 1.2rem;
   font-weight: bold;
 }

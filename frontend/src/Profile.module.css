@@ -6,7 +6,7 @@
 }
 
 h2 {
-  color: black; /* Or #333 for a slightly lighter black */
+  color: #333; /* Changed back to dark color for better readability */
 }
 
 .profileData {
@@ -25,7 +25,7 @@ h2 {
 }
 
 h3 {
-  color: black;
+  color: #333; /* Changed back to dark color for better readability */
   margin-top: 30px;
 }
 
@@ -51,8 +51,8 @@ h3 {
 }
 
 .saveButton {
-  background-color: black;
-  color: white;
+  background-color: #00B4D8; /* Updated to a specific cyan shade */
+  color: black; /* Changed to black for better contrast */
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
