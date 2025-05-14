@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 import React from "react";
 import { Link } from "react-router-dom";
+=======
+
+
+import React from "react";
+>>>>>>> origin/main
 import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
+<<<<<<< HEAD
       <div className={styles.footerContent}>
         <div className={styles.footerSection}>
           <h3>Everything India</h3>
@@ -27,6 +34,9 @@ const Footer = () => {
       <div className={styles.footerBottom}>
         <p>&copy; {new Date().getFullYear()} Everything India. All rights reserved.</p>
       </div>
+=======
+      <p>&copy; 2023 Everything. All rights reserved.</p>
+>>>>>>> origin/main
     </footer>
   );
 };

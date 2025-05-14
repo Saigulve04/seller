@@ -14,8 +14,13 @@ const Header = () => {
       <div className={styles.headerLeft}>
         <Link to="/dashboard" className={styles.logoLink}>
           <img
+<<<<<<< HEAD
             src="/SE logo.png"
             alt="Everything.india Logo"
+=======
+            src="/Frame 1.svg"
+            alt="Everything Logo"
+>>>>>>> origin/main
             className={styles.logo}
           />
           <span className={styles.logoText}>Everything</span>

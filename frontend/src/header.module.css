@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
   position: fixed;
   top: 0;
   left: 0;
@@ -11,6 +12,8 @@
   height: 80px;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+=======
+>>>>>>> origin/main
 }
 
 .headerLeft {
@@ -35,16 +38,20 @@
   font-weight: bold;
 }
 
+<<<<<<< HEAD
 .headerRight {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
+=======
+>>>>>>> origin/main
 .profilePhoto {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+<<<<<<< HEAD
   cursor: pointer;
   border: 2px solid rgba(0, 0, 0, 0.1);
   transition: border-color 0.3s ease;
@@ -67,4 +74,7 @@
   .logoText {
     font-size: 1rem;
   }
+=======
+  cursor: pointer; /* Add cursor pointer for profile photo */
+>>>>>>> origin/main
 }
