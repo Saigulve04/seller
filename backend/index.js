@@ -4,6 +4,8 @@ import path from "path";
 import productRoutes from './routes/productRoutes.js';
 import authRoutes from './routes/authRoutes.js';
 import userRoutes from './routes/userRoutes.js';
+import categoryRoutes from "./routes/categoryRoutes.js";
+
 
 // If you're using ES Modules (import/export), __dirname is not available.
 // So, use import.meta.url to resolve the current directory
@@ -23,6 +25,7 @@ app.use(cors({
 // Middleware to handle JSON and URL-encoded data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use("/api/categories", categoryRoutes);
 
 // Add request logging middleware
 app.use((req, res, next) => {

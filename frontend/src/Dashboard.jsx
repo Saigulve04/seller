@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import styles from "./Dashboard.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -25,37 +27,18 @@ const Dashboard = () => {
       .catch((err) => console.error("Error fetching products", err));
   }, []);
 
-  const handleProfileClick = () => {
-    navigate("/profile");
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    navigate('/login');
   };
 
   return (
-    <div>
-      <header className={styles.header}>
-        <div className={styles.headerLeft}>
-          <Link to="/dashboard" className={styles.logoLink}>
-            <img
-              src="/SE logo.png"
-              alt="Everything.india Logo"
-              className={styles.logo}
-            />
-            <span className={styles.logoText}>Everything</span>
-          </Link>
-        </div>
-        <div className={styles.headerRight}>
-          <img
-            src="/profile.png"
-            alt="Profile"
-            className={styles.profilePhoto}
-            onClick={handleProfileClick}
-            style={{ cursor: "pointer" }}
-          />
-        </div>
-      </header>
-
-      <div className={styles.container}>
+    <div className={styles.container}>
+      <Header />
+      <div className={styles.contentWrapper}>
         <aside className={styles.sidebar}>
-          <div className={styles.sidebarHeader}>Seller Dashboard</div>
+          <div className={styles.sidebarHeader}>Menu</div>
           <nav className={styles.nav}>
             <ul className={styles.navList}>
               <li className={styles.navItem}>
@@ -89,50 +72,48 @@ const Dashboard = () => {
                 </Link>
               </li>
               <li className={styles.navItem}>
-                <Link to="/logout" className={styles.logoutLink}>
+                <button onClick={handleLogout} className={styles.logoutLink}>
                   Logout
-                </Link>
+                </button>
               </li>
             </ul>
           </nav>
         </aside>
-
         <main className={styles.mainContent}>
-          <h1 className={styles.mainHeader}>Welcome to your Dashboard</h1>
+          <h1 className={styles.mainHeader}>Dashboard Overview</h1>
           <div className={styles.stats}>
             <div className={styles.statCard}>
-              <div className={styles.statTitle}>Total Products</div>
-              <div className={styles.statValue}>{products.length}</div>
+              <h3 className={styles.statTitle}>Total Products</h3>
+              <p className={styles.statValue}>{products.length}</p>
             </div>
             <div className={styles.statCard}>
-              <div className={styles.statTitle}>Total Sales</div>
-              <div className={styles.statValue}>{totalSales}</div>
+              <h3 className={styles.statTitle}>Total Sales</h3>
+              <p className={styles.statValue}>{totalSales}</p>
             </div>
             <div className={styles.statCard}>
-              <div className={styles.statTitle}>Total Earnings</div>
-              <div className={styles.statValue}>₹{totalEarnings}</div>
+              <h3 className={styles.statTitle}>Active Listings</h3>
+              <p className={styles.statValue}>{products.length - totalSales}</p>
+            </div>
+            <div className={styles.statCard}>
+              <h3 className={styles.statTitle}>Total Earnings</h3>
+              <p className={styles.statValue}>₹{totalEarnings}</p>
             </div>
           </div>
-
           <div className={styles.gettingStarted}>
-            <h2 className={styles.gettingStartedTitle}>My Products</h2>
-            <ul className={styles.productList}>
-              {products.map((prod) => (
-                <li key={prod.id} className={styles.productItem}>
-                  <strong>{prod.name}</strong> - ₹{prod.price} -{" "}
-                  {prod.is_sold ? "Sold" : "Available"}
-                </li>
-              ))}
+            <h2 className={styles.gettingStartedTitle}>Getting Started</h2>
+            <p className={styles.gettingStartedText}>
+              Welcome to your seller dashboard! Here's what you can do:
+            </p>
+            <ul>
+              <li>Add new products to your inventory</li>
+              <li>Manage your existing products</li>
+              <li>Track your sales and analytics</li>
+              <li>Update your profile and settings</li>
             </ul>
-
-            <div className={styles.addProductSection}>
-              <Link to="/add-product" className={styles.addProductButton}>
-                Add Your Product
-              </Link>
-            </div>
           </div>
         </main>
       </div>
+      <Footer />
     </div>
   );
 };
